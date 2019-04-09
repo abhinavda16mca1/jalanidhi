@@ -5,6 +5,7 @@ from django.shortcuts import render,HttpResponseRedirect
 
 from models import adminlog
 from supply.models import water
+from User.models import Complan,userreg
 
 # Create your views here.
 def adminlogg(request):	
@@ -40,3 +41,31 @@ def viewstaff(request):
 	view=water.objects.all().filter(Status=1)
 	return render(request,'admin/viewstaff.html',{"rr":view})
 	return HttpResponseRedirect("/admin/viewstaff")
+def approvecomp(request):
+	
+	ii = request.session["id"]
+	print ii
+	qq=Complan.objects.select_related('uid').filter(Complaint_Reply='')
+	print qq
+	
+
+	return render(request,'admin/approvecomp.html',{"cc":qq})
+def reply(request):
+	if request.method=="POST":
+		id=request.POST.get('idd')
+		Reply = request.POST.get('rep','')
+		print Reply
+		# qm=Complan(Complaint_Reply=Reply)
+		Complan.objects.filter(id=id).update(Complaint_Reply=Reply)
+		return HttpResponseRedirect("/admin/approvecomp")
+		# qm.save()
+
+	q=request.GET.get('id','')
+	aa=Complan.objects.all().filter(id=q)
+	return render(request,'admin/adminreply.html',{"ee":aa})
+# def replycompl(request):
+	
+
+
+
+

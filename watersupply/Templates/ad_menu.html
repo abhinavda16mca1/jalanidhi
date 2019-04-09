@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 
-<title> {% block title %} {% endblock %} </title>
+<title>Admin Login</title>
 	<link rel="stylesheet" href="{% static "ad_css/font-awesome.min.css" %}"/>
 	<link rel="stylesheet" href="{% static "ad_css/bootstrap.min.css" %}"/>
 	<link rel="stylesheet" href="{% static "ad_css/dataTables.bootstrap.min.css" %}"/>
@@ -42,13 +42,13 @@
 
 <body>
 	<div class="brand clearfix">
-	<a href="dashboard.php" style="font-size: 20px;"> Admin Panel</a>  
+	<a href="dashboard.php" style="font-size: 30px;"> Admin Panel</a>  
 		<span class="menu-btn"><i class="fa fa-bars"></i></span>
 		<ul class="ts-profile-nav">
 
 			<li class="ts-account">
-				<a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
-				<ul>
+				<!-- <a href="#"><img src="img/ts-avatar.jpg" class="ts-avatar hidden-side" alt=""> Account <i class="fa fa-angle-down hidden-side"></i></a>
+				<ul> -->
 					<li><a href="change-password.php">Change Password</a></li>
 					<li><a href="/adminlog">Logout</a></li>
 				</ul>
@@ -66,6 +66,12 @@
 <ul>
 <li><a href="/admin/adm">Approve</a></li>
 <li><a href="/admin/viewstaff">View Staff</a></li>
+</ul>
+</li>
+<li><a href="#"><i class="fa fa-files-o"></i>Complaints</a>
+<ul>
+<li><a href="/admin/approvecomp">View Complaints</a></li>
+
 </ul>
 </li>
 

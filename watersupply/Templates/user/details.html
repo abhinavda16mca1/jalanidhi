@@ -1,0 +1,58 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+{% block content %}
+<form class="login100-form validate-form" action="/User/comp/" method="POST">
+	{% csrf_token %}
+	
+					<span class="login100-form-title p-b-55">
+						Complaint Register
+					</span>
+					<div class="wrap-input100 validate-input m-b-16" > 
+						
+						<input class="input100" type="text" value="{{ww}}" name="id"  >
+						
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+						
+					</div>
+
+				
+
+					<div class="wrap-input100 validate-input m-b-16" >
+						<input class="input100" type="text" name="area" placeholder="Area">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" >
+						<input class="input100"  name="pincode" placeholder="pincode">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" >
+						<input class="input100"  name="compnt" placeholder="Complaint Title">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" >
+						<textarea class="input100"  name="complaintdes" placeholder="Complaint Discription"></textarea>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn p-t-25">
+						<button class="login100-form-btn">
+							SUBMIT
+						</button>
+
+{% endblock %}

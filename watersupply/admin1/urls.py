@@ -12,5 +12,8 @@ urlpatterns = [
 	url(r'^main/',views.main),
 	url(r'^update/',views.update),
 	url(r'^viewstaff/',views.viewstaff),
+	url(r'^approvecomp/',views.approvecomp),
+	url(r'^reply/',views.reply),
+	# url(r'^replycompl/',views.replycompl),
 
 ]

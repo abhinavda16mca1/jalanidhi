@@ -21,4 +21,6 @@ urlpatterns = [
     # url(r'^admin/', admin.site.urls),
     url(r'^supply/', include('supply.urls')),
     url(r'^admin/', include('admin1.urls')),
+    url(r'^User/', include('User.urls')),
+
 ]

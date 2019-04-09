@@ -1,14 +1,8 @@
 {% extends 'Base.html' %}
 {% load static %}
-
-{% block title %}
-Login
-{% endblock %}
-
-
 {% block content %}
 
-<form class="login100-form validate-form" action="/supply/loggs/" method="POST">
+<form class="login100-form validate-form" action="supply/loggs/" method="POST">
 	{% csrf_token %}
 					<span class="login100-form-title p-b-55">
 						Login
@@ -47,7 +41,7 @@ Login
 					<div class="text-center w-full p-t-115">
 						
 
-						<a class="txt1 bo1 hov1" href="/supply/reg/">
+						<a class="txt1 bo1 hov1" href="/reg">
 							register							
 						</a>
 					</div>

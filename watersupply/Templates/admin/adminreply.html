@@ -1,0 +1,33 @@
+{% extends 'ad_menu.html' %}
+{% load static %}
+{% block content %}
+</nav>
+	<form class="login100-form validate-form" action="/admin/reply/" method="POST">
+		{% csrf_token %}
+<div class="content-wrapper">
+			<div class="container-fluid">
+
+				<div class="row">
+					<div class="col-md-12">
+
+						
+						
+							<body>
+								{% for x in ee %}
+								<input type="hidden" name="idd" value="{{x.id}}">
+								<h4>Name  :  {{x.uid.Name}}</h4></br>
+								<h4>Compliant  :  {{x.Complaint}}</h4></br>
+
+								{% endfor %}
+							<h4>Reply Complaints :</h4><h2> </br><textarea name="rep" ></textarea> </h2>
+							<input type="submit" name="submit">
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</form>
+
+
+{% endblock %}
